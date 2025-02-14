@@ -1,0 +1,33 @@
+Unit testing permutations that I continually have to rethink of for every new service.
+Testing with 0, 1, and 2 to test non-existent, single, and multiple entity scenarios and reduce diminishing returns on additional tests.
+
+SaveAll Function
+
+NewItem_0Children_SaveAll
+NewItem_1NewChild_SaveAll
+NewItem_2NewChildren_SaveAll
+
+ExistingItem_0NewChildren_NoChange_SaveAll
+ExistingItem_0NewChildren_WithChange_SaveAll
+
+ExistingItem_1NewChild_SaveAll
+ExistingItem_2NewChildren_SaveAll
+
+ExistingItem_1ExistingChild_SaveAll
+ExistingItem_1ExistingChild_UpdateChild_SaveAll
+ExistingItem_2ExistingChildren_SaveAll
+
+ExistingItem_1NewChild_1ExistingChild_SaveAll
+
+ExistingItem_1ExistingChild_DeleteChild_SaveAll
+ExistingItem_2ExistingChildren_DeleteFirstChild_SaveAll
+ExistingItem_2ExistingChildren_DeleteSecondChild_SaveAll
+ExistingItem_2ExistingChildren_DeleteAllChildren_SaveAll
+ExistingItem_2ExistingChildren_DeleteAllChildren_1NewChild_SaveAll
+
+
+Delete Function
+ExistingItem_0Children_DeleteItem
+ExistingItem_1ExistingChild_DeleteItem
+ExistingItem_2ExistingChild_DeleteItem
+NonExistentItem_IgnoreError_ConsiderLogging_UnlessInCriticalEnvironments
