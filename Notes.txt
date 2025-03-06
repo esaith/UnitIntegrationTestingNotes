@@ -31,3 +31,5 @@ ExistingItem_0Children_DeleteItem
 ExistingItem_1ExistingChild_DeleteItem
 ExistingItem_2ExistingChild_DeleteItem
 NonExistentItem_IgnoreError_ConsiderLogging_UnlessInCriticalEnvironments
+
+When there is a many-to-many relationship, when adding an entity to the collection of other, ie EntityA.Add(EntityB), then test with EntityA.Add(new Entity() { EntityId: EntityB.EntityId }). This way we are checking to verify the original EntityB is being added and not a duplicate. 
