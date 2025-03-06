@@ -33,3 +33,5 @@ ExistingItem_2ExistingChild_DeleteItem
 NonExistentItem_IgnoreError_ConsiderLogging_UnlessInCriticalEnvironments
 
 When there is a many-to-many relationship, when adding an entity to the collection of other, ie EntityA.Add(EntityB), then test with EntityA.Add(new Entity() { EntityId: EntityB.EntityId }). This way we are checking to verify the original EntityB is being added and not a duplicate. 
+
+In general, when linking many-to-many, make sure all the entities have valid Ids. In some cases you can use negative numbers during creation. .Net Framework 4.6+ allows this. Not sure if other ORM's allow this.
